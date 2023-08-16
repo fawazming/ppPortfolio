@@ -1,0 +1,46 @@
+.flexbox{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.mr-3{
+    margin-right: 0.75rem;
+}
+.mt-3{
+    margin-top: 0.75rem;
+}
+.mb-3{
+    margin-bottom: 0.75rem;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+article{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+article>p{
+    text-align: justify;
+}
+.btn{
+    border: 1px #333 solid;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 2rem;
+    background-color: #222;
+    color: #fff !important;
+}
+.btn:hover{
+    font-size: 2.5rem;
+    cursor: pointer;
+    text-decoration: underline;
+
+}
+.lead{
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+.imgeffect{
+    background-blend-mode: multiply;
+}
