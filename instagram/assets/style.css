@@ -1,0 +1,141 @@
+:root{
+    --bg: #fff;
+    --secondary: #48aaf4;
+    --primary:#000;
+}
+
+/* :root{
+    --bg: #000;
+    --secondary: #989da0;
+    --primary:#fff;
+} */
+
+body {
+    font-family: calibri, sans-serif;
+    background-color: var(--bg);
+    color: var(--primary);
+}
+
+main {
+    margin: 40px auto;
+    width: 360px;
+}
+
+.phone{
+    display: none;
+}
+
+.box {
+    border: 1px #ccc solid;
+    padding: 40px 35px;
+    padding-bottom: 10px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+form {
+    margin-top: 40px;
+    width: 100%;
+
+}
+
+input {
+    padding: 12px 8px;
+    background-color: #eee;
+    border: 1px #eee solid;
+    border-radius: 4px;
+    width: 95%;
+    margin-bottom: 6px;
+}
+
+.btn {
+    margin-top: 10px;
+    border-radius: 8px;
+    padding: 10px 10px;
+    background-color: var(--secondary);
+    color: #fff;
+    font-weight: 800;
+    width: 100%;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.inline {
+    display: inline;
+}
+
+.line {
+    width: 120px;
+    border: 1px #ccc solid;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.mr-1 {
+    margin-right: 8px;
+}
+
+.or {
+    font-weight: 900;
+    margin: 10px 20px;
+}
+
+.text-sm {
+    font-size: 0.9rem;
+}
+
+.text-extrabold {
+    font-weight: 800;
+}
+
+.pt-2 {
+    padding-top: 10px;
+}
+
+.anchor {
+    color: var(--secondary);
+    font-weight: 800;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 880px) {
+    .all{
+        display: flex;
+        justify-content: center;
+    }
+
+    main{
+        margin: 40px 0;
+    }
+    .phone{
+        display: block;
+        max-width: 50%;
+        margin: 35px 0;
+    }
+
+    .phn{
+        height: 95vh;
+    }
+
+    .shot{
+        position: absolute;
+        top: 70px;
+        left: 420px;
+        height: 535px;
+    }
+
+}
