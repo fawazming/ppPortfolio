@@ -19,7 +19,9 @@
   /**
    * Remove the margin in all browsers.
    */
-  
+   .rounded-xl{
+    border-radius: 20px;
+  }
   body {
     margin: 0;
   }

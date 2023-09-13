@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,107 +9,114 @@
     <link rel="stylesheet" href="assets/tailwind.css">
 </head>
 <style>
-    *{
-        margin: 0;
-        padding: 0;
+    main {
+        width: 400px;
+        margin: auto;
     }
-    .mobile{
-        width:400px;
-        margin:auto;
-    }
-
 </style>
+
 <body>
     <main class="mobile">
-        <div class="flex bg-blue-700 mx-4 my-2 p-5 rounded-lg text-white">
-            <div class="">
-                <div class="bg-white-400 text-blue-">
-                <a href="" class="flex bg-white-400 text-blue">Hide Balance <img src="" class="fa fa-eye-slash" alt=""></a>
+        <header class="text-center text-blue-600 flex justify-between my-5">
+            <!-- <nav class="fa fa-arrow-left mr-50"></nav> -->
+            <a href="index.html"><i class="fa fa-arrow-left"></i></a>
+            <p class="text-center">Ajo Dashboard</p>
+            <div></div>
+        </header>
+        <div class="flex items-center bg-blue-600 my-2 p-5 rounded-lg text-white">
+            <div class="w-1/2">
+                <button class="w-full flex justify-between items-center bg-white text-blue-700 py-1 px-2 rounded-lg">
+                    <span class="font-semibold">Hide Balance</span>
+                    <i class="fa fa-eye-slash"></i>
+                </button>
+                <div class="mt-10">
+                    <small>My ajo balance</small>
+                    <h2 class="font-bold text-lg">&#x20a6; 55,000.00</h2>
                 </div>
                 <div>
-                    <span class="text-right"><img src="" class="fa fa-star" alt="">4.0</span>
                 </div>
-                <div>
-                    <p>My ajo Balance</p>
-                </div>
-                <div class="font-bold">
-                    <h2>55,000.00</h2>
-                </div>
-                </div>
-                
             </div>
-        </div>
-        </section>
-        <div class="m-8 mt-5 mr-4 ">
+            <div class="w-2/3"></div>
             <div>
-            <p><a href="btn" class="bg-blue-700 text-white mr-5 border-none rounded-lg pl-10 pt-2 pb-2 pr-5">Create ajo group</a>
-             <a href="btn" class="bg-white-400 text-blue-700 border-solid border-2 border-gray-300 rounded-lg pl-5 pt-2 pb-2 pr-5">Join ajo group</a></p>
+                <span class="text-sm font-semibold"><i class="fa fa-star text-xl"></i>4.0</span>
+            </div>
+
         </div>
-    </div>
-         <div class="flex"> 
-         <div class="underline">
-            <p><a href="" class="mr-8 mx-10">Active ajo (6)</a><a href="" class="mr-8">Inactive ajo (3)</a><p>
-         </div>
-         </div>
-         <div class="">
-            <div class="bg-gray-200 mx- my-5 p-5 pb-5 rounded-lg border-4 border-solid border-gray-300 h-32 font-normal">
+        <div class="my-5 flex font-semibold">
+                <a href="btn" class="w-1/2 bg-blue-600 text-white mr-5 border-none rounded-lg py-2 px-8">Create ajo group</a>
+                <a href="btn" class="w-1/2 bg-white-400 text-blue-700 border-solid border-2 border-gray-300 rounded-lg py-2 px-10">Join ajo group</a>
+        </div>
+        <div class="flex">
+            <div class="underline">
+                <p><a href="" class="mr-8 mx-10">Active ajo (6)</a><a href="" class="mr-8">Inactive ajo (3)</a>
+                <p>
+            </div>
+        </div>
+        <div class="">
+            <div
+                class="bg-gray-200 mx- my-5 p-5 pb-5 rounded-lg border-4 border-solid border-gray-300 h-32 font-normal">
                 <div>
-                    <h3><b class="text-blue-900 font-bold">Market Women Group</b> <b class="text-green-600 font-black">(Active)</b></h3>
+                    <h3><b class="text-blue-900 font-bold">Market Women Group</b> <b
+                            class="text-green-600 font-black">(Active)</b></h3>
                 </div>
                 <div>
-                     <p>Slots: <b class="text-blue-900">5 Slots remaining</b></p>
+                    <p>Slots: <b class="text-blue-900">5 Slots remaining</b></p>
                 </div>
                 <div>
-                     <p>Amount: 5,000 Daily</p>
+                    <p>Amount: 5,000 Daily</p>
                 </div>
                 <div>
-                  <p>Rotary amount: 75,000/Member</p>
-                </div>
+                    <p>Rotary amount: 75,000/Member</p>
                 </div>
             </div>
-                <div>
-                    <p><img src="" class="fa fa-right-account" alt=""></p>
-                <!-- <div> -->
-                <!-- <span>15 Members <br> -->
-                 <!-- <img src="" class="fa fa-group items-center" alt=""> -->
-                <!-- </span> -->
-             <!-- </div> -->
-             <div class="">
-                <div class="bg-gray-200 mx- my-5 p-5 pb-5 rounded-lg border-4 border-solid border-gray-300 h-32 font-normal">
+        </div>
+        <div>
+            <p><img src="" class="fa fa-right-account" alt=""></p>
+            <!-- <div> -->
+            <!-- <span>15 Members <br> -->
+            <!-- <img src="" class="fa fa-group items-center" alt=""> -->
+            <!-- </span> -->
+            <!-- </div> -->
+            <div class="">
+                <div
+                    class="bg-gray-200 mx- my-5 p-5 pb-5 rounded-lg border-4 border-solid border-gray-300 h-32 font-normal">
                     <div>
-                        <h3><b class="text-blue-900 font-bold">Market Women Group</b> <b class="text-green-600 font-black">(Active)</b></h3>
+                        <h3><b class="text-blue-900 font-bold">Market Women Group</b> <b
+                                class="text-green-600 font-black">(Active)</b></h3>
                     </div>
                     <div>
-                         <p>Slots: <b class="text-blue-900">5 Slots remaining</b></p>
+                        <p>Slots: <b class="text-blue-900">5 Slots remaining</b></p>
                     </div>
                     <div>
-                         <p>Amount: 5,000 Daily</p>
+                        <p>Amount: 5,000 Daily</p>
                     </div>
                     <div>
-                      <p>Rotary amount: 75,000/Member</p>
-                    </div>
+                        <p>Rotary amount: 75,000/Member</p>
                     </div>
                 </div>
-                <div class="">
-                    <div class="bg-gray-200 mx- my-5 p-5 pb-5 rounded-lg border-4 border-solid border-gray-300 h-32 font-normal">
-                        <div>
-                            <h3><b class="text-blue-900 font-bold">Market Women Group</b> <b class="text-green-600 font-black">(Active)</b></h3>
-                        </div>
-                        <div>
-                             <p>Slots: <b class="text-blue-900">5 Slots remaining</b></p>
-                        </div>
-                        <div>
-                             <p>Amount: 5,000 Daily</p>
-                        </div>
-                        <div>
-                          <p>Rotary amount: 75,000/Member</p>
-                        </div>
-                        </div>
+            </div>
+            <div class="">
+                <div
+                    class="bg-gray-200 mx- my-5 p-5 pb-5 rounded-lg border-4 border-solid border-gray-300 h-32 font-normal">
+                    <div>
+                        <h3><b class="text-blue-900 font-bold">Market Women Group</b> <b
+                                class="text-green-600 font-black">(Active)</b></h3>
                     </div>
+                    <div>
+                        <p>Slots: <b class="text-blue-900">5 Slots remaining</b></p>
+                    </div>
+                    <div>
+                        <p>Amount: 5,000 Daily</p>
+                    </div>
+                    <div>
+                        <p>Rotary amount: 75,000/Member</p>
+                    </div>
+                </div>
             </div>
-            </div>
+        </div>
+        </div>
         </div>
     </main>
-    
+
 </body>
 </htm>
