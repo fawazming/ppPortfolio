@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header class="flex justify-between items-center">
+        <h2 class="font-mono text-5xl">AWSM</h2>
+        <nav class="flex justify-between w-2/3">
+            <a href="#!" class="text-blue-400 hover:underline hover:text-blue-600" onclick="navigator('gr8')">Project 1</a>
+            <a href="#!" class="text-blue-400 hover:underline hover:text-blue-600" onclick="navigator('currencyConverter')">Project 2</a>
+            <a href="#!" class="text-blue-400 hover:underline hover:text-blue-600"  onclick="navigator('whatsappLinker')">Project 3</a>
+        </nav>
+    </header>
+
+    <section class="py-20">
+        <p class="text-6xl text-center">Hello there 👋</p>
+    </section>
+
+    <section id="gr8" class="hidden my-10">
+        <h1 class="text-center text-4xl font-bold">Which one is greater?</h1>
+        <p class="text-center text-sm my-2">Enter the two numbers in the fields below</p>
+        <div class="flex flex-col items-center">
+            <fieldset>
+                <label for="">1st Number</label>
+                <input type="number" id="num1" class="border-2 border-red-600 rounded-xl">
+            </fieldset>
+            <fieldset class="mt-4">
+                <label for="">2nd Number</label>
+                <input type="number" id="num2" class="border-2 border-blue-600 rounded-xl">
+            </fieldset>
+            <p id="result" class="text-center text-green-600"></p>
+            <button class="mt-4 px-5 border-2 border-red-600 rounded-xl hover:bg-red-500 hover:text-white"
+                id="determiner">Determine</button>
+        </div>
+    </section>
+
+    <hr>
+    <hr>
+    <hr>
+
+    <section id="currencyConverter" class="hidden my-10">
+        <h1 class="text-center text-4xl font-bold">Currency Converter</h1>
+        <p class="text-center text-sm my-2">Naira to Dollar Converter</p>
+        <div class="flex flex-col items-center">
+            <fieldset>
+                <label for="">Naira:</label>
+                <input type="number" id="naira" class="px-2 border-2 border-yellow-600 rounded-xl">
+            </fieldset>
+            <fieldset class="mt-4">
+                <label for="">Dollar</label>
+                <input type="number" id="dollar" class="px-2 border-2 border-green-600 rounded-xl">
+            </fieldset>
+            <div class="flex">
+                <button class="mt-4 px-5 border-2 border-yellow-600 rounded-xl hover:bg-yellow-500 hover:text-white mr-3"
+                    id="n2d">Convert</button>
+                <button class="mt-4 px-5 border-2 border-purple-600 rounded-xl hover:bg-purple-500 hover:text-white"
+                    id="d2n">Invert</button>
+            </div>
+
+        </div>
+    </section>
+
+    <hr>
+    <hr>
+    <hr>
+
+    <section id="whatsappLinker" class="hidden my-10">
+        <h1 class="text-center text-4xl font-bold">Whatsapp Link</h1>
+        <p class="text-center text-sm my-2">Input the Nigerian Phone Number</p>
+        <div class="flex flex-col items-center">
+            <fieldset>
+                <label for="">Phone Number:</label>
+                <input type="number" id="phone" class="px-2 border-2 border-green-900 rounded-xl">
+            </fieldset>
+            <a href="" target="_blank" id="waLink"></a>
+            <div class="flex">
+                <button class="mt-4 px-5 border-2 border-orange-600 rounded-xl hover:bg-orange-500 hover:text-white mr-3"
+                    id="genWALink">Generate</button>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        let n1 = document.querySelector('#num1')
+        let n2 = document.querySelector('#num2')
+        let d = document.querySelector('#determiner')
+        let r = document.querySelector('#result')
+
+        function gr8er(num1, num2) {
+            if (num1 > num2) {
+                return `${num1} is greater than ${num2}`
+            } else {
+                return `${num2} is greater than ${num1}`
+            }
+        }
+
+        d.addEventListener('click', () => {
+
+            let num1 = parseInt(n1.value);
+            let num2 = parseInt(n2.value);
+
+            let determined = gr8er(num1, num2);
+
+            r.innerText = determined;
+        })
+    </script>
+
+    <script>
+        let q = document.querySelector('#naira')
+        let w = document.querySelector('#dollar')
+        let t = document.querySelector('#n2d')
+        let i = document.querySelector('#d2n')
+        const rate = 982;
+
+        t.addEventListener('click', () => {
+            let x = parseInt(q.value) / rate;
+            w.value = Math.ceil(x)
+        })
+
+        i.addEventListener('click', ()=>{
+            let y = parseInt(w.value) * rate;
+            q.value = Math.round(y)
+        })
+
+
+    </script>
+
+    <script>
+        let u = document.querySelector('#phone')
+        let waLink = document.querySelector('#waLink')
+        let gen = document.querySelector('#genWALink')
+
+        gen.addEventListener('click', ()=>{
+            let phone = u.value;
+            if(phone.length == 11){
+                phone = phone.substring(1)
+                let url = `https://wa.me/234${phone}`
+                waLink.innerText = url;
+                waLink.href = url;
+            }else if(phone.length == 10){
+                let url = `https://wa.me/234${phone}`
+                waLink.innerText = url;
+                waLink.href = url;
+            }else{
+                waLink.innerHTML = `<b>PHONE</b> number is incorrect`;
+            }
+        })
+    </script>
+
+    <script>
+        function navigator(identity){
+            let sect = document.querySelector(`#${identity}`)
+            sect.classList.toggle('hidden')
+        }
+    </script>
+
+</body>
+
+</html>
